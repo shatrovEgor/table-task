@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import ImportField from './Components/ImportField';
+import LangSettings from './Components/LangSettings';
+import BasicTable from './Components/Table';
+import { MainContainer, TableContainer, LangContainer, MainContainerScroll } from './Components/_styles';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <LangContainer>
+        <LangSettings />
+      </LangContainer>
+
+      <MainContainerScroll>
+        <ImportField />
+      </MainContainerScroll>
+      
+      <MainContainer>
+        <TableContainer>
+          <BasicTable/>
+        </TableContainer>
+      </MainContainer>
     </div>
   );
 }
